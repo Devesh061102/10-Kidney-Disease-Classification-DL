@@ -1,7 +1,7 @@
 from Kidney_Disease_Classification.constants import *
 import os
 from Kidney_Disease_Classification.utils.common import read_yaml, create_directories,save_json
-from Kidney_Disease_Classification.entity.config_entity import DataIngestionConfig,PrepareBaseModelConfig,TrainingConfig
+from Kidney_Disease_Classification.entity.config_entity import DataIngestionConfig,PrepareBaseModelConfig,TrainingConfig,EvaluationConfig
 
 
 class ConfigurationManager:
@@ -69,3 +69,15 @@ class ConfigurationManager:
         )
 
         return training_config
+    
+    def get_evaluation_config(self) -> EvaluationConfig:
+        eval_config = EvaluationConfig(
+            path_of_model="artifacts/training/model.h5",
+            training_data="artifacts/data_ingestion/kidney-ct-scan-image",
+            mlflow_uri="https://dagshub.com/Devesh061102/10-Kidney-Disease-Classification-DL.mlflow",
+            all_params=self.params,
+            params_image_size=self.params.IMAGE_SIZE,
+            params_batch_size=self.params.BATCH_SIZE
+        )
+        return eval_config
+    

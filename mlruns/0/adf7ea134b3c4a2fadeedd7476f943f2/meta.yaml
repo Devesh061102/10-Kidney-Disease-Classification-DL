@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/ML-Projects/10-Kidney-Disease-Classification-DL/mlruns/0/adf7ea134b3c4a2fadeedd7476f943f2/artifacts
+end_time: 1718388082319
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: adf7ea134b3c4a2fadeedd7476f943f2
+run_name: stylish-vole-951
+run_uuid: adf7ea134b3c4a2fadeedd7476f943f2
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1718388065631
+status: 3
+tags: []
+user_id: LENOVO
